@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    max-width: 75vw;
+    padding: 1rem 1rem;
+    margin: 0 auto;
+    /* background-color: aquamarine; */
+}
+a{
+    text-decoration: none;
+}
+.header_container{
+    margin-bottom: 2.8rem;
+}
+.header_title{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+.header_desc{
+    margin: auto;
+    max-width: 568px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.main_container{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.card_container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card_image_container{
+    /* position relative taki image to iske upar overlap karwa sake */
+    /* position: relative; */
+    overflow: hidden; 
+    height: 12rem;
+}
+.card_image{
+    object-fit: cover;
+    object-position: center;
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.card_title_container{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+/* jab card container pe hover to only image scale ho */
+.card_container:hover .card_image{
+    transform: scale(1.1);
+    transition: 200ms;
+}
+.card_title{
+    font-size: 1.2rem;
+    color: black;
+    line-height: 1.5rem;
+}
+.card_title_anchor:hover .card_title{
+    color: blue;
+}
+.card_body{
+    color: rgb(44, 42, 42);
+    font-size: 1rem;
+}
+.card_footer_container{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.author_container{
+    display: flex;
+    gap: 1rem;
+}
+.author_avatar_container{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(44, 42, 42);
+    border-radius: 50%;
+    background-color: rgb(105, 102, 102);
+}
+.author_info_container{
+    display: flex;
+    flex-direction: column;
+}
+.author_info_name{
+    color: rgb(82, 82, 194);
+}
+.author_info_date{
+    color: rgb(71, 69, 69);
+}
+.card_tag_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card_tag_container span{
+    font-size: 0.9rem;
+    border: 1px solid rgb(35, 33, 33);
+    border-radius: 2px;
+    line-height: 1rem;
+    padding: 0.25rem;
+}
+
+@media  (max-width:650px){
+    .main_container{
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(8,1fr);
+    }
+    .card_image_container{
+        /* position relative taki image to iske upar overlap karwa sake */
+        position: relative;
+        overflow: hidden;
+        height: 7rem;
+    }
+}
+@media  (min-width:650px) and (max-width:1050px){
+    .main_container{
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+    .card_image_container{
+        /* position relative taki image to iske upar overlap karwa sake */
+        position: relative;
+        overflow: hidden;
+        height: 8rem;
+    }
+}
+@media  (min-width:1050px) and (max-width:1340px){
+    .main_container{
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+    .card_image_container{
+        /* position relative taki image to iske upar overlap karwa sake */
+        position: relative;
+        overflow: hidden;
+        height: 11rem;
+    }
+}
